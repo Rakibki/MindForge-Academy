@@ -5,10 +5,14 @@ import OurPartners from "@/components/OurPartners/OurPartners";
 import Banner from "@/components/banner/Banner";
 import Feature from "@/components/feature/Feature";
 import News from "@/components/news/News";
+import Footer from "@/components/shared/Footer";
+import Navber from "@/components/shared/Navber";
+import CurrentUser from "@/utils/currentUser/CurrentUser";
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
     <div>
+      <Navber />
       <Banner />
       <Feature />
       <LearnGrow />
@@ -16,6 +20,7 @@ const HomePage = () => {
       <Instructors />
       <OurPartners />
       <News />
+      <Footer />
     </div>
   );
 };

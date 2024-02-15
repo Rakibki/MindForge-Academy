@@ -2,7 +2,7 @@ import "./style.css";
 
 const Title = ({ text }) => {
   return (
-    <div class="one">
+    <div className="one">
       <h1>{text}</h1>
     </div>
   );
