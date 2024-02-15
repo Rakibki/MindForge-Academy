@@ -1,0 +1,42 @@
+[
+  {
+    "image": "",
+    "name": "",
+    "position": ""
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-02.webp",
+    "name": "Edward Norton",
+    "position": "Web Developer"
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-03.webp",
+    "name": "Penelope Cruz",
+    "position": "Digital Marketer"
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-04.webp",
+    "name": "John Travolta",
+    "position": "WordPress Expert"
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-01.webp",
+    "name": "Jane Seymour",
+    "position": "UI Designer"
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-02.webp",
+    "name": "Edward Norton",
+    "position": "Web Developer"
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-03.webp",
+    "name": "Penelope Cruz",
+    "position": "Digital Marketer"
+  },
+  {
+    "image": "https://demo.edublink.co/wp-content/uploads/2023/06/team-04.webp",
+    "name": "John Travolta",
+    "position": "WordPress Expert"
+  }
+]
