@@ -5,6 +5,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 import { useState } from "react";
 import axios from "axios";
+import { IoMdArrowBack } from "react-icons/io";
 
 const page = () => {
   const [error, setError] = useState("");
@@ -46,14 +47,19 @@ const page = () => {
     console.log(res?.data?.token);
     const token = res?.data?.token?.access;
     localStorage.setItem("token", token);
-    
   };
 
   return (
-    <div className="my-10">
-      <div className="bg-[#3fd0d4] p-10 w-[50%] mx-auto">
+    <div className="my-10 relative">
+      <Link className="z-20" href={"/"}>
+        <div className="absolute px-2 py-1 hover:border-[#2db880] cursor-pointer transition-all hover:text-[#2db880] gap-2 rounded-full border-[1px] flex items-center left-[45%] -top-3">
+          <IoMdArrowBack />
+          <p>Back to home</p>
+        </div>
+      </Link>
+      <div className="bg-[#fff] p-10 shadow-xl w-[40%] mx-auto">
         <form onSubmit={handleRegister}>
-          <h1 className="text-3xl font-bold text-white mb-4">Sign Up</h1>
+          <h1 className="text-3xl font-bold text-black mb-4">Sign Up</h1>
 
           <div className="relative mt-3">
             <input
@@ -99,15 +105,15 @@ const page = () => {
             <p className="text-red-700 font-Poppins mb-2">{error}</p>
             <button
               type="submit"
-              className="py-3 hover:bg-[#6fdcdf] hover:text-white transition-all bg-white text-black font-Poppins font-semibold w-full"
+              className="py-3 bg-[#1ab69d] hover:text-white transition-all text-[#fff] font-Poppins font-semibold w-full"
             >
               REGISTER NOW
             </button>
           </div>
 
-          <h1 className="font-Poppins text-white text-center">
+          <h1 className="font-Poppins text-black text-lg text-center">
             Already registered?{" "}
-            <Link className="hover:underline font-semibold" href={"/login"}>
+            <Link className="hover:underline text-[#1ab69d] font-semibold" href={"/login"}>
               Go to log in
             </Link>
           </h1>

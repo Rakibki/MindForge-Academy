@@ -4,9 +4,12 @@ import { useState } from "react";
 import { CiLock } from "react-icons/ci";
 import { FaPhone } from "react-icons/fa6";
 import axios from "axios";
+import { IoMdArrowBack } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
 const page = () => {
   const [error, setError] = useState("");
+  const { push } = useRouter();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -17,13 +20,20 @@ const page = () => {
     const res = await axios.post(" https://softmaxshop.com/user/login/", data);
     const token = res?.data?.token?.access;
     localStorage.setItem("token", token);
+    push("/dashboard");
   };
 
   return (
-    <div className="my-10">
-      <div className="bg-[#3fd0d4] p-10 w-[50%] mx-auto">
+    <div className="my-10 relative">
+      <Link className="z-20" href={"/"}>
+        <div className="absolute px-2 py-1 hover:border-[#2db880] cursor-pointer transition-all hover:text-[#2db880] gap-2 rounded-full border-[1px] flex items-center left-[45%] -top-3">
+          <IoMdArrowBack />
+          <p>Back to home</p>
+        </div>
+      </Link>
+      <div className="bg-[#fff] shadow-2xl p-10 w-[40%] mx-auto">
         <form onSubmit={handleLogin}>
-          <h1 className="text-3xl font-bold text-white mb-4">Sign In</h1>
+          <h1 className="text-3xl font-bold text-black mb-4">Sign In</h1>
 
           <div className="relative mt-3">
             <input
@@ -51,14 +61,17 @@ const page = () => {
             </p>
             <button
               type="submit"
-              className="py-3 hover:bg-[#6fdcdf] hover:text-white transition-all bg-white text-black font-Poppins font-semibold w-full"
+              className="py-3 bg-[#2db880] text-white transition-all font-Poppins font-semibold w-full"
             >
               LOGIN NOW
             </button>
           </div>
-          <h1 className="font-Poppins text-white text-center">
+          <h1 className="font-Poppins text-black text-center">
             New here?{" "}
-            <Link className="hover:underline font-semibold" href={"/register"}>
+            <Link
+              className="hover:underline text-lg text-[#2db880] font-semibold"
+              href={"/register"}
+            >
               Create a New Account
             </Link>
           </h1>

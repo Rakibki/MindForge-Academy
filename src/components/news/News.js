@@ -1,14 +1,18 @@
 import Image from "next/image";
 import image1 from "../../assets/images/course-79-750x750.jpg";
+import image2 from "../../assets/images/course-09-750x750.jpg";
+import image3 from "../../assets/images/course-07-750x750.jpg";
 import Title from "@/utils/title/Title";
 import { CiCalendar } from "react-icons/ci";
 import { FaRegCommentDots } from "react-icons/fa6";
 
 const News = () => {
   return (
-    <>
-      <Title text={"Get News with EduBlink"} />
-      <div className="grid grid-cols-3 gap-5 bg-[#fbfbfc] my-32">
+    <div className="my-32">
+      <div className="mb-6">
+        <Title text={"Get News with EduBlink"} />
+      </div>
+      <div className="grid grid-cols-3 gap-5 bg-[#fbfbfc]">
         {/* card 1 */}
         <div className="relative flex justify-center">
           <Image
@@ -39,13 +43,14 @@ const News = () => {
             </p>
           </div>
         </div>
+
         {/* card 3 */}
         <div className="relative flex justify-center">
           <Image
             className="rounded-2xl"
             width={400}
             height={800}
-            src={image1}
+            src={image2}
             alt="image"
           />
           <div className="w-[80%] p-6 h-[66%] rounded-2xl absolute shadow-xl bg-white top-60">
@@ -75,7 +80,7 @@ const News = () => {
             className="rounded-2xl"
             width={400}
             height={800}
-            src={image1}
+            src={image3}
             alt="image"
           />
           <div className="w-[80%] p-6 h-[66%] rounded-2xl absolute shadow-xl bg-white top-60">
@@ -100,7 +105,7 @@ const News = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

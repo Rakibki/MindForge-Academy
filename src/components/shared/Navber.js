@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import logo from "../../assets/images/logo-dark.png";
 import Link from "next/link";
@@ -86,9 +86,11 @@ const Navber = () => {
           >
             Join
           </button>
-          <button className="py-3 px-6 rounded-lg hover:opacity-60 text-white bg-[#1ab69d]">
-            Login
-          </button>
+          <Link href={"/login"}>
+            <button className="py-3 px-6 rounded-lg hover:opacity-60 text-white bg-[#1ab69d]">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
 

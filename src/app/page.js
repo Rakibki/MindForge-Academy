@@ -16,7 +16,7 @@ const HomePage = async () => {
       <Banner />
       <Feature />
       <LearnGrow />
-      <Course />
+      {/* <Course /> */}
       <Instructors />
       <OurPartners />
       <News />

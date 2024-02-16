@@ -3,7 +3,7 @@ import logo from "../../assets/images/logo-dark.png"
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-[#f0f4f5] text-base-content">
+    <footer className="footer p-20 bg-[#f0f4f5] text-base-content">
       <nav>
         <h6 className="footer-title">
           <Image src={logo} alt="logo" height={80} width={140} />

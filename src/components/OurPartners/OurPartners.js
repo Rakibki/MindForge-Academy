@@ -10,10 +10,10 @@ import brand8 from "../../assets/images/brand-08.png";
 
 const OurPartners = () => {
   return (
-    <div className="grid items-center my-20 grid-cols-5">
+    <div className="grid items-center gap-9 mx-10 my-20 grid-cols-5">
       <div className="col-span-2">
-        <p className="text-lg text-[#808080]">ABOUT US</p>
-        <h1 className="text-3xl font-semibold">
+        <p className="text-lg mb-2 text-[#808080]">ABOUT US</p>
+        <h1 className="text-3xl mb-4 font-semibold">
           Learn & Grow Your Skills{" "}
           <span className="text-[#ee4a62]">From Anywhere</span>
         </h1>

@@ -2,29 +2,34 @@ import Image from "next/image";
 import about1 from "../../assets/images/about-01.webp";
 import about2 from "../../assets/images/Image-2.png";
 import { FaArrowRight } from "react-icons/fa6";
+import { FaCertificate } from "react-icons/fa";
 
 const LearnGrow = () => {
   return (
-    <div className="grid gap-14 px-14 my-10 bg-[#fefefe] items-center grid-cols-2">
+    <div className="mt-32 grid gap-20 px-14 my-10 bg-[#fefefe] items-center grid-cols-2">
       <div>
         <div className="relative">
           <Image width={"100%"} height={"100%"} src={about1} alt="aboutF" />
-          <div className="absolute -top-7 -right-4">
+          <div className="absolute rounded-2xl -top-7 -right-4">
             <Image width={"100%"} height={"100%"} src={about2} alt="aboutF" />
           </div>
-          <div className="p-10 bg-white shadow-2xl absolute -bottom-7 -right-3 rounded-xl">
-            <h1>
-              29+ <br /> Wonderful Awards
-            </h1>
+          <div className="p-6 bg-white shadow-2xl flex items-center gap-6 absolute -bottom-7 -right-3 rounded-xl">
+            <div className="p-5 rounded-full bg-[#e7f8f5]">
+              <FaCertificate className="text-[#1ab69d]" size={"30px"} />
+            </div>
+            <div>
+              <span className="block text-[#1ab69d] text-2xl">29+</span>
+              <h1 className="text-2xl">Wonderful Awards</h1>
+            </div>
           </div>
         </div>
       </div>
 
       <div>
-        <p className="text-lg text-[#808080]">ABOUT US</p>
-        <h1 className="text-5xl font-semibold">
+        <p className="text-lg mb-2 text-[#808080]">ABOUT US</p>
+        <h1 className="text-5xl mb-4 font-semibold">
           Learn & Grow Your Skills{" "}
-          <span className="text-[#ee4a62]">From Anywhere</span>
+          <span className="text-[#ee4a62] inline-block">From Anywhere</span>
         </h1>
         <p className="text-[#808080]">
           Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex
