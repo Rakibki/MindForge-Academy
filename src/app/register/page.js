@@ -45,7 +45,8 @@ const page = () => {
     );
     console.log(res?.data?.token);
     const token = res?.data?.token?.access;
-    localStorage.setItem("token", token)
+    localStorage.setItem("token", token);
+    
   };
 
   return (

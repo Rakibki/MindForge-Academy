@@ -5,12 +5,9 @@ import logo from "../../assets/images/logo-dark.png";
 import DashboardNavber from "@/components/dashboardNaver/DashboardNavber";
 import Image from "next/image";
 import CurrentUser from "@/utils/currentUser/CurrentUser";
+import DashboardMenu from "@/components/dashboardMenu/DashboardMenu";
 
-
-const layout =  ({ children }) => {
-
-
- 
+const layout = ({ children }) => {
   return (
     <>
       <div>
@@ -30,13 +27,7 @@ const layout =  ({ children }) => {
               <hr />
 
               <div className="p-3 flex flex-col">
-                <h2>Item</h2>
-                <h2>Item</h2>
-                <h2>Item</h2>
-                <h2>Item</h2>
-                {/* {role === "admin" && <AdminMenu />}
-                  {role === "user" && <UserMenu />}
-                  {role === "deliveryMan" && <DeliveryManMenu />} */}
+                <DashboardMenu />
               </div>
 
               <div className="absolute p-3 bottom-2">
@@ -47,9 +38,7 @@ const layout =  ({ children }) => {
                   <FaRegUser className="text-xl" /> <p>Profile</p>
                 </Link>
 
-                <div
-                  className="mb-3 transition-all font-semibold flex text-[#b91c1c] gap-2 items-center font-Inter text-base"
-                >
+                <div className="mb-3 transition-all font-semibold flex text-[#b91c1c] gap-2 items-center font-Inter text-base">
                   <CiLogin className="text-2xl" /> <p>Logout</p>
                 </div>
               </div>

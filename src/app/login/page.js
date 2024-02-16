@@ -15,7 +15,8 @@ const page = () => {
     const data = { mobile_number: mobile_number, password: password };
 
     const res = await axios.post(" https://softmaxshop.com/user/login/", data);
-    console.log(res?.data);
+    const token = res?.data?.token?.access;
+    localStorage.setItem("token", token);
   };
 
   return (
