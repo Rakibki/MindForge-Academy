@@ -8,6 +8,8 @@ import News from "@/components/news/News";
 import Footer from "@/components/shared/Footer";
 import Navber from "@/components/shared/Navber";
 import CurrentUser from "@/utils/currentUser/CurrentUser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const HomePage = async () => {
   return (
@@ -21,6 +23,7 @@ const HomePage = async () => {
       <OurPartners />
       <News />
       <Footer />
+      <ToastContainer />
     </div>
   );
 };

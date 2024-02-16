@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import { MdOutlineClose } from "react-icons/md";
 import { LuSend } from "react-icons/lu";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const JoinTeacher = ({ modalIsOpen, afterOpenModal, closeModal, subtitle }) => {
   const customStyles = {
@@ -27,14 +28,13 @@ const JoinTeacher = ({ modalIsOpen, afterOpenModal, closeModal, subtitle }) => {
     const data = {
       fullName: name,
       email: email,
-      phone_number: parseInt(number),
+      phone_number: number,
     };
 
-    console.log(data);
-
-    axios
-      .post("https://softmaxshop.com/user/teachers/", data)
-      .then((res) => console.log(res));
+    axios.post("https://softmaxshop.com/user/teachers/", data).then((res) => {
+      toast.success("Your request has been send successfully!");
+      closeModal();
+    });
   };
 
   return (

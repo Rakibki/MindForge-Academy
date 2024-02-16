@@ -8,14 +8,12 @@ const Page = () => {
   const token = localStorage.getItem("token");
   const user = CurrentUser();
 
-
-  // ________________
   const handleEnroll = async (id) => {
     const studentdata = {
-      student: user?.id.toString(),
+      student: user?.user?.id.toString(),
       course: id.toString(),
       status: "enrolled",
-    }
+    };
 
     const res = await fetch(
       "https://softmaxshop.com/user/enroll-course/",
@@ -29,6 +27,7 @@ const Page = () => {
       }
     );
     const result = await res?.json();
+    console.log(result);
   };
 
   return (

@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
         <div className="max-w-[1300px] mx-auto">
           {/* <Navber /> */}
           {children}
+
           {/* <Footer /> */}
         </div>
       </body>
