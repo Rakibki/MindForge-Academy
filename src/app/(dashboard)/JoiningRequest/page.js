@@ -1,12 +1,25 @@
-'use client'
-import TeacherRow from "@/components/teacherRow/teacherRow";
+"use client";
+import { useEffect, useState } from "react";
 
-const page = async () => {
-  const res = await fetch("https://softmaxshop.com/user/teachers/");
-  const data = await res?.json();
+const Page = () => {
+  const [data, setData] = useState([]);
 
-  const handleApprove = () => {
-    alert("click");
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("https://softmaxshop.com/user/teachers/");
+      const jsonData = await res.json();
+      setData(jsonData);
+    };
+
+    fetchData();
+  }, []);
+
+  const handleApprove = async (item) => {
+    const res = await fetch(
+      `https://softmaxshop.com/user/approved-teacher/${item?.id}/`
+    );
+    // const data = await res?.json();
+    console.log(res);
   };
 
   return (
@@ -26,7 +39,21 @@ const page = async () => {
           </thead>
           <tbody>
             {data?.map((item) => (
-              <TeacherRow handleApprove={handleApprove} item={item} key={item?.id} />
+              <tr key={item?.id}>
+                <th>{item?.id}</th>
+                <td>{item?.approved_as_teacher}</td>
+                <td>{item?.fullName}</td>
+                <td>{item?.email}</td>
+                <td>{item?.phone_number}</td>
+                <td>
+                  <button
+                    onClick={() => handleApprove(item)}
+                    className="py-3 px-6 rounded-lg hover:opacity-60 text-white bg-[#1ab69d]"
+                  >
+                    Approve
+                  </button>
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
@@ -35,4 +62,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;

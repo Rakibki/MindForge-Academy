@@ -6,6 +6,8 @@ const getCourses = () => {
   const token = localStorage.getItem("token");
   const [course, setCouses] = useState([]);
 
+  console.log(course);
+
   useEffect(() => {
     fetch("https://softmaxshop.com/user/courses/", {
       method: "GET",

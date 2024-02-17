@@ -44,7 +44,6 @@ const page = () => {
       "https://softmaxshop.com/user/register/",
       data
     );
-    console.log(res?.data?.token);
     const token = res?.data?.token?.access;
     localStorage.setItem("token", token);
   };
