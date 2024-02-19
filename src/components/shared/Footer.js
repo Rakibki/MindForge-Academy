@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../assets/images/logo-dark.png"
+import logo from "../../assets/images/logo-dark.png";
 
 const Footer = () => {
   return (
@@ -38,7 +38,9 @@ const Footer = () => {
               placeholder="username@site.com"
               className="input input-bordered join-item"
             />
-            <button className="btn btn-primary join-item">Subscribe</button>
+            <button className="btn btn-primary border-[#1ab69d] bg-[#1ab69d] join-item">
+              Subscribe
+            </button>
           </div>
         </fieldset>
       </form>

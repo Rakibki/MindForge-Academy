@@ -10,7 +10,7 @@ import brand8 from "../../assets/images/brand-08.png";
 
 const OurPartners = () => {
   return (
-    <div className="grid items-center gap-9 mx-10 my-20 grid-cols-5">
+    <div className="lg:grid items-center gap-9 mx-10 my-20 grid-cols-5">
       <div className="col-span-2">
         <p className="text-lg mb-2 text-[#808080]">ABOUT US</p>
         <h1 className="text-3xl mb-4 font-semibold">
@@ -26,31 +26,31 @@ const OurPartners = () => {
       <div className="col-span-3">
         {/* col-1 */}
         <div className="grid grid-cols-4">
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand1} />
           </div>
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand2} />
           </div>
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand3} />
           </div>
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand4} />
           </div>
         </div>
         {/* col-2 */}
         <div className="grid grid-cols-4">
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand5} />
           </div>
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand6} />
           </div>
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand7} />
           </div>
-          <div className="py-4 border-[1px] px-8">
+          <div className="py-4 border-[1px] lg:px-8">
             <Image width={100} height={200} alt="brand" src={brand8} />
           </div>
         </div>

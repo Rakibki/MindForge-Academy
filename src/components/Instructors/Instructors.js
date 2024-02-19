@@ -11,7 +11,7 @@ const Instructors = () => {
       <div className="mb-6">
         <Title text={"Course Instructors"} />
       </div>
-      <div className="gap-3 grid grid-cols-4">
+      <div className="gap-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="p-3">
           <Image
             className="rounded-2xl"

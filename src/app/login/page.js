@@ -18,6 +18,7 @@ const page = () => {
     const data = { mobile_number: mobile_number, password: password };
 
     const res = await axios.post(" https://softmaxshop.com/user/login/", data);
+    console.log(res?.data);
     const token = res?.data?.token?.access;
     localStorage.setItem("token", token);
     push("/dashboard");
@@ -31,7 +32,8 @@ const page = () => {
           <p>Back to home</p>
         </div>
       </Link>
-      <div className="bg-[#fff] shadow-2xl p-10 w-[40%] mx-auto">
+
+      <div className="bg-[#fff] shadow-2xl p-10 md:w-[60%] w-[90%] lg:w-[40%] mx-auto">
         <form onSubmit={handleLogin}>
           <h1 className="text-3xl font-bold text-black mb-4">Sign In</h1>
 

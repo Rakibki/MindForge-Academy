@@ -56,7 +56,7 @@ const page = () => {
           <p>Back to home</p>
         </div>
       </Link>
-      <div className="bg-[#fff] p-10 shadow-xl w-[40%] mx-auto">
+      <div className="bg-[#fff] p-10 shadow-xl md:w-[60%] w-[90%] lg:w-[40%] mx-auto">
         <form onSubmit={handleRegister}>
           <h1 className="text-3xl font-bold text-black mb-4">Sign Up</h1>
 
@@ -112,7 +112,10 @@ const page = () => {
 
           <h1 className="font-Poppins text-black text-lg text-center">
             Already registered?{" "}
-            <Link className="hover:underline text-[#1ab69d] font-semibold" href={"/login"}>
+            <Link
+              className="hover:underline text-[#1ab69d] font-semibold"
+              href={"/login"}
+            >
               Go to log in
             </Link>
           </h1>

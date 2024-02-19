@@ -12,7 +12,7 @@ const News = () => {
       <div className="mb-6">
         <Title text={"Get News with EduBlink"} />
       </div>
-      <div className="grid grid-cols-3 gap-5 bg-[#fbfbfc]">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-5 bg-[#fbfbfc]">
         {/* card 1 */}
         <div className="relative flex justify-center">
           <Image

@@ -5,8 +5,8 @@ import { PiUsersFill } from "react-icons/pi";
 
 const Feature = () => {
   return (
-    <div className="grid gap-5 p-10 bg-[#1eb796] grid-cols-4">
-      <div className="flex gap-2 border-r-2 items-center">
+    <div className="grid gap-5 p-10 bg-[#1eb796] grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="flex gap-2 md:border-r-2 items-center">
         <div className="bg-[#33bea4] text-white p-4 rounded-full">
           <MdOutlineComputer size={"40px"} />
         </div>
@@ -15,7 +15,7 @@ const Feature = () => {
           <h3>Online Courses</h3>
         </div>
       </div>
-      <div className="flex gap-2 border-r-2 items-center">
+      <div className="flex gap-2 md:border-r-2 items-center">
         <div className="bg-[#33bea4] text-white p-4 rounded-full">
           <FaUsers size={"40px"} />
         </div>
@@ -24,7 +24,7 @@ const Feature = () => {
           <h3>Instructors</h3>
         </div>
       </div>
-      <div className="flex gap-2 border-r-2 items-center">
+      <div className="flex gap-2 md:border-r-2 items-center">
         <div className="bg-[#33bea4] text-white p-4 rounded-full">
           <AiFillSafetyCertificate size={"40px"} />
         </div>

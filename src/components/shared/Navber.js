@@ -25,7 +25,7 @@ const Navber = () => {
   }
 
   const navItems = (
-    <div className="flex gap-3">
+    <div className="lg:flex gap-3">
       <li>
         <Link href={"/"}>Home</Link>
       </li>
@@ -72,7 +72,7 @@ const Navber = () => {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
+          <a className="btn hidden md:block btn-ghost text-xl">
             <Image width={150} height={60} alt="logo" src={logo} />
           </a>
         </div>

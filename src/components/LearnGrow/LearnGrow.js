@@ -6,7 +6,7 @@ import { FaCertificate } from "react-icons/fa";
 
 const LearnGrow = () => {
   return (
-    <div className="mt-32 grid gap-20 px-14 my-10 bg-[#fefefe] items-center grid-cols-2">
+    <div className="mt-32 lg:grid  gap-20 px-14 my-10 bg-[#fefefe] items-center grid-cols-2">
       <div>
         <div className="relative">
           <Image width={"100%"} height={"100%"} src={about1} alt="aboutF" />
@@ -25,7 +25,7 @@ const LearnGrow = () => {
         </div>
       </div>
 
-      <div>
+      <div className=" md:mt-0 mt-20">
         <p className="text-lg mb-2 text-[#808080]">ABOUT US</p>
         <h1 className="text-5xl mb-4 font-semibold">
           Learn & Grow Your Skills{" "}

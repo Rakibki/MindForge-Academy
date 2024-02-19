@@ -15,8 +15,9 @@ const Page = () => {
   }, []);
 
   const handleApprove = async (item) => {
+    alert(item?.id)
     const res = await fetch(
-      `https://softmaxshop.com/user/approved-teacher/${item?.id}/`
+      `https://softmaxshop.com/user/approved-teacher/${item?.id}`
     );
     // const data = await res?.json();
     console.log(res);
